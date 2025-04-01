@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People - LCI | UFSC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">LCI | UFSC</div>
-        <button class="nav-toggle">☰</button>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -25,18 +25,18 @@
         <section class="section">
             <h2>Our Team</h2>
             <div class="people-grid">
-                <div class="person">
+                <a href="https://lci.ufsc.br/faculty.html" class="person">
                     <h3>Carlos Galup-Montoro</h3>
-                    <p>Professor | MOSFET Modeling Expert</p>
-                </div>
-                <div class="person">
-                    <h3>Márcio Cherem Schneider</h3>
-                    <p>Professor | Analog Circuit Specialist</p>
-                </div>
-                <div class="person">
-                    <h3>Graduate Students</h3>
-                    <p>MSc and PhD researchers in IC technology</p>
-                </div>
+                    <p>Professor at UFSC, specializing in CMOS design and modeling.</p>
+                </a>
+                <a href="#" class="person">
+                    <h3>Jane Smith</h3>
+                    <p>Researcher focusing on analog circuit design.</p>
+                </a>
+                <a href="#" class="person">
+                    <h3>John Doe</h3>
+                    <p>PhD candidate in microelectronics.</p>
+                </a>
             </div>
         </section>
     </main>
@@ -44,6 +44,7 @@
     <footer class="footer">
         <p>LCI - EEL/CTC/UFSC, Florianópolis, SC</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
