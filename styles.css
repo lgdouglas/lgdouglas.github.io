@@ -17,16 +17,16 @@ body {
     width: 100%;
     background: linear-gradient(90deg, #004A8F, #0066CC);
     color: white;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
-    justify-content: spacegrades-between;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .nav-links li {
-    margin-left: 2.5rem;
+    margin-left: 2rem;
 }
 
 .nav-links a {
@@ -51,7 +51,7 @@ body {
 }
 
 .hero {
-    height: 100vh;
+    height: 80vh;
     background: url('https://via.placeholder.com/1920x1080?text=LCI+Lab') no-repeat center/cover;
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
@@ -102,15 +102,21 @@ body {
 }
 
 .section {
-    padding: 5rem 2rem;
+    padding: 6rem 2rem 4rem; /* Extra top padding for fixed navbar */
     max-width: 1200px;
     margin: 0 auto;
+    min-height: calc(100vh - 200px); /* Ensure content fills page */
 }
 
 .section h2 {
     font-size: 2.5rem;
     color: #004A8F;
     margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section p {
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -123,7 +129,7 @@ body {
 
 .research-item, .person, .news-item {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
@@ -142,18 +148,7 @@ body {
     background: linear-gradient(90deg, #004A8F, #0066CC);
     color: white;
     text-align: center;
-    padding: 3rem 2rem;
-}
-
-.footer h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: white;
-}
-
-.footer p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    padding: 2rem;
 }
 
 /* Responsive Design */
@@ -177,6 +172,6 @@ body {
         font-size: 1.2rem;
     }
     .section {
-        padding: 3rem 1rem;
+        padding: 4rem 1rem 2rem;
     }
 }
