@@ -164,7 +164,7 @@ main {
 }
 
 .news-item p {
-    margin-bottom: 0.5rem; /* Adjust spacing between paragraphs */
+    margin-bottom: 1.0rem; /* Adjust spacing between paragraphs */
 }
 
 .footer {
