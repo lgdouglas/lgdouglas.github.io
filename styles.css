@@ -9,6 +9,14 @@ body {
     line-height: 1.6;
     color: #333;
     background: #f9f9f9;
+    min-height: 100vh; /* Ensure body takes full height */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Pushes footer to bottom */
+    padding-top: 60px; /* Space for fixed navbar */
 }
 
 .navbar {
@@ -102,10 +110,9 @@ body {
 }
 
 .section {
-    padding: 6rem 2rem 4rem; /* Extra top padding for fixed navbar */
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    min-height: calc(100vh - 200px); /* Ensure content fills page */
 }
 
 .section h2 {
@@ -148,7 +155,9 @@ body {
     background: linear-gradient(90deg, #004A8F, #0066CC);
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
+    width: 100%;
+    position: relative; /* Changed from fixed to relative for flex layout */
 }
 
 /* Responsive Design */
@@ -172,6 +181,6 @@ body {
         font-size: 1.2rem;
     }
     .section {
-        padding: 4rem 1rem 2rem;
+        padding: 1.5rem;
     }
 }
