@@ -172,7 +172,7 @@ main {
     padding: 1.5rem;
     width: 100%;
     flex-shrink: 0;
-    height: 48px; /* Explicit height */
+    height: 60px; /* Explicit height */
 }
 
 /* Mobile Responsive Design */
