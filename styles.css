@@ -8,22 +8,25 @@
 body {
     line-height: 1.6;
     color: #333;
+    background: #f9f9f9;
 }
 
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #004A8F;
+    background: linear-gradient(90deg, #004A8F, #0066CC);
     color: white;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: spacegrades-between;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
@@ -33,76 +36,147 @@ body {
 }
 
 .nav-links li {
-    margin-left: 2rem;
+    margin-left: 2.5rem;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFC107;
 }
 
 .hero {
     height: 100vh;
-    background: url('circuit-bg.jpg') no-repeat center/cover;
+    background: url('https://via.placeholder.com/1920x1080?text=LCI+Lab') no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
 }
 
 .btn {
     background: #FFC107;
     color: #333;
-    padding: 0.75rem 1.5rem;
+    padding: 0.9rem 2rem;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ffdb58;
 }
 
 .section {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: #004A8F;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
-.research-grid {
+.research-grid, .people-grid, .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
-.research-item {
-    background: #f5f5f5;
-    padding: 1.5rem;
-    border-radius: 5px;
+.research-item, .person, .news-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
 }
 
-footer {
-    background: #004A8F;
+.research-item:hover, .person:hover, .news-item:hover {
+    transform: translateY(-5px);
+}
+
+.research-item h3, .person h3, .news-item h3 {
+    color: #004A8F;
+    margin-bottom: 0.5rem;
+}
+
+.footer {
+    background: linear-gradient(90deg, #004A8F, #0066CC);
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
+}
+
+.footer h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
     .nav-links {
-        display: none; /* Add hamburger menu with JS */
+        margin-top: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links li {
+        margin: 0.5rem 0;
     }
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .hero-content p {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+    .section {
+        padding: 3rem 1rem;
     }
 }
