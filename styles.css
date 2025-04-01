@@ -176,7 +176,7 @@ main {
 }
 
 .person .bio.active {
-    max-height: 200px; /* Adjust based on content length */
+    max-height: 300px; /* Increased to accommodate longer bios */
     opacity: 1;
 }
 
@@ -262,7 +262,7 @@ main {
     }
 
     .person .bio.active {
-        max-height: 300px; /* Allow more space on mobile if needed */
+        max-height: 400px; /* Allow more space on mobile if needed */
     }
 }
 
