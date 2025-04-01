@@ -152,7 +152,7 @@ main {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
     cursor: pointer; /* Indicate the person card is clickable */
 }
 
@@ -163,21 +163,47 @@ main {
 .research-item h3, .person h3, .news-item h3 {
     color: #004A8F;
     margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.person p:not(.bio p) {
+    text-align: center; /* Keep the short description centered */
 }
 
 .person .bio {
     margin-top: 1rem;
-    font-size: 0.7rem;
-    color: #555;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    padding: 1rem;
+    background: #f5f5f5; /* Subtle background to distinguish the bio */
+    border-left: 3px solid #004A8F; /* Accent border on the left */
+    border-radius: 5px;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+    text-align: left; /* Left-align the bio text */
+    transition: max-height 0.3s ease, opacity 0.3s ease 0.1s;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
 }
 
 .person .bio.active {
-    max-height: none; /* Increased to accommodate longer bios */
+    max-height: 150px; /* Smaller max-height since bios are shorter */
     opacity: 1;
+}
+
+.person .bio p {
+    margin: 0; /* Remove default paragraph margin in bio */
+}
+
+.person .bio .read-more {
+    color: #004A8F;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.person .bio .read-more:hover {
+    color: #0066CC;
 }
 
 .footer {
@@ -259,10 +285,11 @@ main {
 
     .person .bio {
         font-size: 0.9rem;
+        padding: 0.75rem;
     }
 
     .person .bio.active {
-        max-height: 400px; /* Allow more space on mobile if needed */
+        max-height: 200px; /* Slightly more space on mobile */
     }
 }
 
