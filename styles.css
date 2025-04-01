@@ -20,7 +20,7 @@ main {
     flex: 1 0 auto;
     padding-top: 60px; /* Matches navbar height */
     background: #f9f9f9;
-    min-height: calc(100vh - 108px); /* 100vh - 60px (navbar) - 48px (footer) */
+    min-height: calc(100vh - 127px); /* 100vh - 65px (navbar + shadow) - 62px (footer + buffer) */
 }
 
 .navbar {
@@ -73,7 +73,7 @@ main {
 }
 
 .hero {
-    height: calc(100vh - 120px); /* 100vh - 60px (navbar) - 48px (footer) */
+    height: calc(100vh - 127px); /* 100vh - 65px (navbar + shadow) - 62px (footer + buffer) */
     background: url('https://via.placeholder.com/1920x1080?text=LCI+Lab') no-repeat center/cover;
     display: flex;
     align-items: center;
@@ -172,7 +172,7 @@ main {
     padding: 1.5rem;
     width: 100%;
     flex-shrink: 0;
-    height: 60px; /* Explicit height */
+    height: 60px; /* Updated height */
 }
 
 /* Mobile Responsive Design */
@@ -204,11 +204,11 @@ main {
     }
 
     .hero {
-        height: calc(100vh - 48px); /* 100vh - 48px (footer), navbar offset by padding */
+        height: calc(100vh - 60px); /* 100vh - 60px (footer), navbar offset by padding */
     }
 
     main {
-        min-height: calc(100vh - 48px); /* Adjust for mobile */
+        min-height: calc(100vh - 60px); /* Adjust for mobile */
     }
 
     .hero-content h1 {
