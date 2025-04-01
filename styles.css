@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    flex: 1;
+    flex: 1; /* Pushes footer down */
     padding-top: 60px; /* Space for fixed navbar */
 }
 
@@ -39,7 +39,7 @@ main {
 }
 
 .nav-toggle {
-    display: none; /* Hidden on desktop */
+    display: none;
     background: none;
     border: none;
     color: white;
@@ -68,7 +68,7 @@ main {
 }
 
 .hero {
-    height: 80vh;
+    min-height: calc(100vh - 60px - 60px); /* 100vh - navbar - footer */
     background: url('https://via.placeholder.com/1920x1080?text=LCI+Lab') no-repeat center/cover;
     display: flex;
     align-items: center;
@@ -177,11 +177,11 @@ main {
     }
 
     .nav-toggle {
-        display: block; /* Show hamburger on mobile */
+        display: block;
     }
 
     .nav-links {
-        display: none; /* Hidden by default on mobile */
+        display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -189,7 +189,7 @@ main {
     }
 
     .nav-links.active {
-        display: flex; /* Show when toggled */
+        display: flex;
     }
 
     .nav-links li {
@@ -197,7 +197,7 @@ main {
     }
 
     .hero {
-        height: 60vh; /* Shorter on mobile */
+        min-height: calc(100vh - 80px - 50px); /* Adjusted for mobile navbar/footer */
     }
 
     .hero-content h1 {
@@ -226,7 +226,7 @@ main {
     }
 
     .research-grid, .people-grid, .news-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
