@@ -73,7 +73,7 @@ main {
 }
 
 .hero {
-    height: calc(100vh - 108px); /* 100vh - 60px (navbar) - 48px (footer) */
+    height: calc(100vh - 120px); /* 100vh - 60px (navbar) - 48px (footer) */
     background: url('https://via.placeholder.com/1920x1080?text=LCI+Lab') no-repeat center/cover;
     display: flex;
     align-items: center;
