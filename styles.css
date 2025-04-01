@@ -176,7 +176,7 @@ main {
 }
 
 .person .bio.active {
-    max-height: 300px; /* Increased to accommodate longer bios */
+    max-height: 500px; /* Increased to accommodate longer bios */
     opacity: 1;
 }
 
