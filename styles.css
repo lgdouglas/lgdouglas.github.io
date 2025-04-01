@@ -13,14 +13,12 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    overflow-y: hidden; /* Prevent body from scrolling */
 }
 
 main {
-    flex: 1 0 auto;
+    flex: 1 0 auto; /* Allow main to grow with content */
     padding-top: 60px; /* Matches navbar height */
     background: #f9f9f9;
-    min-height: calc(100vh - 127px); /* 100vh - 65px (navbar + shadow) - 62px (footer + buffer) */
 }
 
 .navbar {
@@ -98,7 +96,7 @@ main {
     z-index: 1;
 }
 
-.hero-content h1 {
+.hero-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -207,11 +205,7 @@ main {
         height: calc(100vh - 60px); /* 100vh - 60px (footer), navbar offset by padding */
     }
 
-    main {
-        min-height: calc(100vh - 60px); /* Adjust for mobile */
-    }
-
-    .hero-content h1 {
+    .hero-content h2 {
         font-size: 2rem;
     }
 
@@ -255,7 +249,7 @@ main {
         font-size: 1.5rem;
     }
 
-    .hero-content h1 {
+    .hero-content h2 {
         font-size: 1.5rem;
     }
 
