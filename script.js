@@ -7,22 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // New functionality: Toggle bio on person click
+    // Modal functionality
     const people = document.querySelectorAll('.person');
+    const modal = document.querySelector('#bio-modal');
+    const modalBody = modal.querySelector('.modal-body');
+    const modalClose = modal.querySelector('.modal-close');
 
+    // Open modal when a person is clicked
     people.forEach(person => {
         person.addEventListener('click', () => {
-            // Close all other bios
-            people.forEach(p => {
-                const bio = p.querySelector('.bio');
-                if (p !== person && bio.classList.contains('active')) {
-                    bio.classList.remove('active');
-                }
-            });
-
-            // Toggle the clicked person's bio
-            const bio = person.querySelector('.bio');
-            bio.classList.toggle('active');
+            const bioContent = person.querySelector('.bio-content').innerHTML;
+            modalBody.innerHTML = bioContent;
+            modal.classList.add('active');
         });
+    });
+
+    // Close modal when the close button is clicked
+    modalClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    // Close modal when clicking outside the modal content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
     });
 });
