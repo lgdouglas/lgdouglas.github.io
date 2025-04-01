@@ -163,10 +163,6 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.news-item p {
-    margin-bottom: 1.0rem; /* Adjust spacing between paragraphs */
-}
-
 .footer {
     background: linear-gradient(90deg, #004A8F, #0066CC);
     color: white;
