@@ -71,7 +71,7 @@ main {
 }
 
 .hero {
-    min-height: calc(100vh - 115px); /* Adjusted: 100vh - 65px (navbar + shadow) - 50px (footer) */
+    height: calc(100vh - 108px); /* 100vh - 60px (navbar) - 48px (footer) */
     background: url('https://via.placeholder.com/1920x1080?text=LCI+Lab') no-repeat center/cover;
     display: flex;
     align-items: center;
@@ -202,7 +202,7 @@ main {
     }
 
     .hero {
-        min-height: calc(100vh - 50px); /* 100vh - 50px (footer), navbar handled by padding */
+        height: calc(100vh - 48px); /* 100vh - 48px (footer), navbar offset by padding */
     }
 
     .hero-content h1 {
