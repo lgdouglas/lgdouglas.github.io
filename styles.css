@@ -240,6 +240,7 @@ main {
     color: #004A8F;
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    text-align: center; /* Center the name in the modal */
 }
 
 .modal-body p {
