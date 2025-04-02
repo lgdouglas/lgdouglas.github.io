@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - LCI | UFSC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">LCI | UFSC</div>
-        <button class="nav-toggle">☰</button>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -24,18 +24,31 @@
     <main>
         <section class="section">
             <h2>Our Research</h2>
+            <p>We focus on cutting-edge research in microelectronics, including CMOS design, low-power circuits, and transistor modeling.</p>
             <div class="research-grid">
                 <div class="research-item">
-                    <h3>Advanced Compact MOSFET Model (ACM)</h3>
-                    <p>A charge-based model for precise MOSFET simulation in analog and digital circuits.</p>
+                    <h3>Low-Power CMOS Design</h3>
+                    <p>Exploring techniques to reduce power consumption in CMOS circuits for IoT applications.</p>
                 </div>
                 <div class="research-item">
-                    <h3>Low-Voltage CMOS Design</h3>
-                    <p>Efficient circuits for low-power applications.</p>
+                    <h3>Transistor Modeling</h3>
+                    <p>Developing accurate models for advanced transistor technologies.</p>
                 </div>
-                <div class="research-item">
-                    <h3>Analog IC Design</h3>
-                    <p>Innovative solutions for amplifiers and signal processing.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Publications</h2>
+            <div class="publications-grid">
+                <div class="publication-item">
+                    <h3>A Low-Power CMOS Amplifier for IoT</h3>
+                    <p>Carlos Galup-Montoro, Jane Smith, et al. <br> IEEE LASCAS 2024</p>
+                    <a href="#" class="publication-link">Read Paper</a>
+                </div>
+                <div class="publication-item">
+                    <h3>Advanced Transistor Modeling Techniques</h3>
+                    <p>Carlos Galup-Montoro, John Doe, et al. <br> NorCAS 2023</p>
+                    <a href="#" class="publication-link">Read Paper</a>
                 </div>
             </div>
         </section>
@@ -44,6 +57,7 @@
     <footer class="footer">
         <p>LCI - EEL/CTC/UFSC, Florianópolis, SC</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
