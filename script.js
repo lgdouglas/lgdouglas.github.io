@@ -9,14 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Collapsible sections for publications
     const sectionToggles = document.querySelectorAll('.section-toggle');
-    sectionToggles.forEach((toggle, index) => {
-        const grid = toggle.nextElementSibling;
-        // Expand the first section (Books) by default
-        if (index === 0) {
-            toggle.classList.add('collapsed');
-            grid.classList.add('active');
-        }
+    sectionToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
+            const grid = toggle.nextElementSibling;
             toggle.classList.toggle('collapsed');
             grid.classList.toggle('active');
         });
