@@ -154,15 +154,36 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
     cursor: pointer; /* Indicate the person card is clickable */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    min-height: 200px; /* Ensure consistent height for centering */
 }
 
 .research-item:hover, .person:hover, .news-item:hover {
     transform: translateY(-5px);
 }
 
+.person-content {
+    text-align: center; /* Center all content within */
+}
+
 .research-item h3, .person h3, .news-item h3 {
     color: #004A8F;
     margin-bottom: 0.5rem;
+}
+
+.person .cv-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #004A8F;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.person .cv-link:hover {
+    color: #0066CC;
 }
 
 /* Modal Styles */
@@ -308,6 +329,7 @@ main {
 
     .research-item, .person, .news-item {
         padding: 1rem;
+        min-height: 180px; /* Adjust for mobile */
     }
 
     .modal-content {
