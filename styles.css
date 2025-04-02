@@ -154,10 +154,10 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
     cursor: pointer; /* Indicate the person card is clickable */
+    min-height: 200px; /* Ensure consistent height for centering */
     display: flex; /* Use flexbox to center content */
     align-items: center; /* Vertically center */
     justify-content: center; /* Horizontally center */
-    min-height: 200px; /* Ensure consistent height for centering */
 }
 
 .research-item:hover, .person:hover, .news-item:hover {
@@ -165,12 +165,19 @@ main {
 }
 
 .person-content {
-    text-align: center; /* Center all content within */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Ensure text is centered */
+    width: 100%; /* Ensure it takes full width for centering */
 }
 
 .research-item h3, .person h3, .news-item h3 {
     color: #004A8F;
     margin-bottom: 0.5rem;
+    text-align: center; /* Explicitly center the h3 */
+    width: 100%; /* Ensure it takes full width for centering */
 }
 
 .person .cv-link {
