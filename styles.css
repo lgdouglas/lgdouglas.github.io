@@ -272,6 +272,50 @@ main {
     height: 60px; /* Updated height */
 }
 
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.publication-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+}
+
+.publication-item h3 {
+    color: #004A8F;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.publication-item p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.publication-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #004A8F;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.publication-link:hover {
+    color: #0066CC;
+}
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -351,6 +395,15 @@ main {
 
     .modal-body p {
         font-size: 0.9rem;
+    }
+
+    .publications-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    }
+
+.publication-item {
+    padding: 1rem;
     }
 }
 
