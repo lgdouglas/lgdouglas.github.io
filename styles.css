@@ -19,6 +19,7 @@ main {
     flex: 1 0 auto; /* Allow main to grow with content */
     padding-top: 60px; /* Matches navbar height */
     background: #f9f9f9;
+    min-height: calc(100vh - 120px); /* Ensure main takes up at least the viewport height minus navbar and footer */
 }
 
 .navbar {
@@ -351,7 +352,7 @@ main {
     padding: 1.5rem;
     width: 100%;
     flex-shrink: 0;
-    height: 60px; /* Updated height */
+    height: 60px; /* Explicit height */
 }
 
 .footer-links {
@@ -463,6 +464,11 @@ main {
 
     .footer-link {
         margin: 0.5rem;
+    }
+
+    .footer {
+        height: auto; /* Allow footer to adjust height on mobile */
+        padding: 1rem;
     }
 }
 
