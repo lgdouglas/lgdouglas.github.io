@@ -150,13 +150,64 @@ main {
 .research-grid, .people-grid, .news-grid, .publications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 1rem; /* Reduced gap for more compact layout */
+    margin-top: 1rem;
+}
+
+/* Collapsible Section Styles */
+.publication-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-toggle {
+    font-size: 1.8rem;
+    color: #004A8F;
+    margin: 2rem 0 1rem;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-toggle .toggle-icon {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.section-toggle.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.publications-grid {
+    display: none; /* Hidden by default */
+}
+
+.publications-grid.active {
+    display: grid; /* Show when active */
+}
+
+/* Show More Button */
+.show-more-btn {
+    display: none; /* Hidden by default, shown via JS if needed */
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    background: #004A8F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.show-more-btn:hover {
+    background: #0066CC;
 }
 
 .research-item, .person, .news-item, .publication-item {
     background: white;
-    padding: 1.5rem;
+    padding: 1rem; /* Reduced padding for compactness */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
@@ -182,7 +233,13 @@ main {
 }
 
 .person h3, .publication-item h4 {
-    font-size: 1.2rem; /* Smaller font for publication titles */
+    font-size: 1.1rem; /* Smaller font for publication titles */
+}
+
+.publication-item p {
+    font-size: 0.9rem; /* Smaller font for publication details */
+    color: #444;
+    margin-bottom: 0.5rem;
 }
 
 .person .cv-link, .publication-link {
@@ -191,6 +248,7 @@ main {
     color: #004A8F;
     font-weight: 500;
     text-decoration: none;
+    font-size: 0.9rem; /* Smaller font for links */
     transition: color 0.3s;
 }
 
@@ -357,12 +415,12 @@ main {
 
     .research-grid, .people-grid, .news-grid, .publications-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 0.75rem; /* Even smaller gap for mobile */
     }
 
     .research-item, .person, .news-item, .publication-item {
-        padding: 1rem;
-        min-height: 180px; /* Adjust for mobile */
+        padding: 0.75rem; /* Reduced padding for mobile */
+        min-height: 150px; /* Adjust for mobile */
     }
 
     .modal-content {
